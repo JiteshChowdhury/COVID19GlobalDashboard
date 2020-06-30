@@ -2,13 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.2">
         <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style/styleGrid.css">
         <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/chosen.css">
-        <link rel="stylesheet" href="style/starRatting.css">
+        <link rel="stylesheet" href="style/starRating.css">
 
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
@@ -27,13 +27,16 @@
         <script src="js/chosen.jquery.js"></script>
 
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
         <style>#slider { margin: 10px; }	</style>
         <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://raw.githubusercontent.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.min.js"></script>
+        
 
         <script type="module" src="./js/loadData.js"></script>
         <script type="module" src="./js/worldMap.js"></script>
         <script type="module" src="./js/countryChart.js"></script>
-        <script type="text/javascript" src="newsDataLocal.json"></script>
+        <!-- <script type="text/javascript" src="newsDataLocal.json"></script> -->
         <script type="module" src="./js/countryNews.js"></script>
         <script type="module" src="./js/dataGrid.js"></script>
         <script type="module" src="./js/dataGridGlobal.js"></script>
@@ -43,11 +46,11 @@
     </head>
     <body>
         <div class="grid">
-            <div class="title">COVID19 Global</div>
+            <div class="title">COVID-19 Global</div>
             <div class="ratting">
                 <div class="stars">
                     <form action="" name="submit-to-google-sheet" id="star-ratting">
-                            <button type="submit" style="margin-top: 14px; margin-left: 10px;">Submit</button>
+                            <button type="submit" style="margin-top: 8px; margin-left: 10px;">Submit</button>
                             <input class="star star-5" id="star-5" type="radio" name="ratting" value="5" required/>
                             <label class="star star-5" for="star-5"></label>
                             <input class="star star-4" id="star-4" type="radio" name="ratting" value="4" required/>
@@ -87,11 +90,11 @@
             </div>
             <div class="dateScroll">
                 <div id="sliderDisplay"></div>
+                <div style="text-align: center;">"Use the slider for date wise progression."</div>
                 <div id="slider"></div>
             </div>
-            <div class="selection" id="dropDownChosen">
-                <h1 style="font-family: Oswald;">Cases Country wise:</h1>
-                </br>
+            <div class="selection" id="dropDownChosen"><span class="countryWise">"Cases & News" - Country wise:</span>
+                <br>
                 <select name="country" data-placeholder="Choose a state..." class="chosen"></select>
             </div>
             <div class="country"></div>

@@ -6,7 +6,7 @@
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto;
     grid-template-areas: 
     "title ratting"
     "dataGlobal dataGlobal"
@@ -14,19 +14,21 @@
     "map map"
     "dateScroll dateScroll"
     "selection selection"
-    "country country"
+    "country ."
     "data data"
     "chartTitle chartTitle"
     "chart chart"
     "newsTitle newsTitle"
     "news news"
     "footer footer";
-    grid-gap: 20px;
-    padding: 10px;
+    grid-gap: 5px;
+    /* padding: 5px; */
 }
 
 .title {
     grid-area: title;
+    font-weight: 600;
+    font-size: 24px;
 }
 
 .ratting {
@@ -41,9 +43,14 @@
     grid-template-areas: 
     "globalConfirmed globalRecovered"
     "globalDeceased .";
-    grid-gap: 25px;
+    grid-gap: 15px;
     font-family: 'oswald', sans-serif;
     font-size: large;
+    margin-top: 12px;
+}
+
+#globalGridSpan{
+    font-size: x-large;
 }
 
 .globalConfirmed{
@@ -67,7 +74,7 @@
 
 .map {
     grid-area: map;
-    height: 400px;
+    height: 320px;
 }
 
 .dateScroll{
@@ -80,6 +87,8 @@
 
 .country {
     grid-area: country;
+    font-size: xx-large;
+    margin-top: 10px;
 }
 
 .data{
@@ -90,7 +99,7 @@
     grid-template-areas: 
     "Active Confirmed"
     "Recovered Deceased";
-    grid-gap: 25px;
+    grid-gap: 15px;
     font-family: 'oswald', sans-serif;
     font-size: large;
 }
@@ -117,8 +126,10 @@
 
 .chartTitle{
     grid-area: chartTitle;
-    font-family: 'oswald', sans-serif; 
-    font-size: xx-large;
+    font-size: x-large;
+    font-style: bold;
+    margin-top: 18px;
+    color: black;
 }
 
 .chart {
@@ -128,8 +139,10 @@
 
 .newsTitle {
     grid-area: newsTitle;
-    font-family: 'oswald', sans-serif; 
-    font-size: xx-large;
+    font-size: x-large;
+    font-style: bold;
+    margin-top: 5px;
+    color: black;
 }
 
 .news {
@@ -140,13 +153,18 @@
     grid-area: footer;
 }
 
+/* @media screen and (max-width: 1020px)
+{
+    .title{
+    }
+} */
 
 @media screen and (min-width: 1030px)
 {
     .grid{
         display: grid;
         grid-template-columns: 1fr 900px 900px 1fr;
-        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
         grid-template-areas: 
         ". title ratting ."
         ". dataGlobal dataGlobal ."
@@ -159,7 +177,12 @@
         ". chartTitle newsTitle ."
         ". chart news ."
         ". footer footer .";
-        grid-gap: 35px;
+        grid-gap: 20px;
+    }
+
+    .title{
+        font-size: xxx-large;
+        font-weight: 600;
     }
 
     .ratting{
@@ -182,9 +205,16 @@
         height: 450px;
     }
 
+    .country{
+        font-size: xxx-large;
+        margin-top: 0;
+    }
+    
+
     .chartTitle{
-        font-family: 'oswald', sans-serif; 
         font-size: xx-large;
+        color: black;
+        margin-top: 12px;
     }
 
     .chart{
@@ -193,8 +223,9 @@
     }
 
     .newsTitle{
-        font-family: oswald; 
         font-size: xx-large;
+        color: black;
+        margin-top: 12px;
     }
 
     .news{
