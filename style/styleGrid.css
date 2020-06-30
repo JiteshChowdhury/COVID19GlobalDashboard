@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-template-areas: 
+    "title ratting"
+    "dataGlobal dataGlobal"
+    "radioSelect radioSelect"
+    "map map"
+    "dateScroll dateScroll"
+    "selection selection"
+    "country country"
+    "data data"
+    "chartTitle chartTitle"
+    "chart chart"
+    "newsTitle newsTitle"
+    "news news"
+    "footer footer";
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+.title {
+    grid-area: title;
+}
+
+.ratting {
+    grid-area: ratting;
+}
+
+.dataGlobal{
+    grid-area: dataGlobal;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "globalConfirmed globalRecovered"
+    "globalDeceased .";
+    grid-gap: 25px;
+    font-family: 'oswald', sans-serif;
+    font-size: large;
+}
+
+.globalConfirmed{
+    grid-area: globalConfirmed;
+    fill: black;
+}
+
+.globalRecovered{
+    grid-area: globalRecovered;
+    fill: black;
+}
+
+.globalDeceased{
+    grid-area: globalDeceased;
+    fill: black;
+}
+
+.radioSelect {
+    grid-area: radioSelect;
+}
+
+.map {
+    grid-area: map;
+    height: 400px;
+}
+
+.dateScroll{
+    grid-area: dateScroll;
+}
+
+.selection {
+    grid-area: selection;
+}
+
+.country {
+    grid-area: country;
+}
+
+.data{
+    grid-area: data;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "Active Confirmed"
+    "Recovered Deceased";
+    grid-gap: 25px;
+    font-family: 'oswald', sans-serif;
+    font-size: large;
+}
+
+.Active{
+    grid-area: Active;
+    fill: black;
+}
+
+.Confirmed{
+    grid-area: Confirmed;
+    fill: black;
+}
+
+.Recovered{
+    grid-area: Recovered;
+    fill: black;
+}
+
+.Deceased{
+    grid-area: Deceased;
+    fill: black;
+}
+
+.chartTitle{
+    grid-area: chartTitle;
+    font-family: 'oswald', sans-serif; 
+    font-size: xx-large;
+}
+
+.chart {
+    grid-area: chart;
+    height: 400px;
+}
+
+.newsTitle {
+    grid-area: newsTitle;
+    font-family: 'oswald', sans-serif; 
+    font-size: xx-large;
+}
+
+.news {
+    grid-area: news;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+@media screen and (min-width: 1030px)
+{
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 900px 900px 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+        grid-template-areas: 
+        ". title ratting ."
+        ". dataGlobal dataGlobal ."
+        ". radioSelect . ."
+        ". map map ."
+        ". dateScroll dateScroll ."
+        ". selection . ."
+        ". country . ."
+        ". data data ."
+        ". chartTitle newsTitle ."
+        ". chart news ."
+        ". footer footer .";
+        grid-gap: 35px;
+    }
+
+    .ratting{
+        margin-right: 28px;
+    }
+
+    .dataGlobal{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "globalConfirmed globalRecovered globalDeceased .";
+        grid-gap: 25px;
+        font-family: 'oswald', sans-serif;
+        font-size: large;
+    }
+
+    .map{
+        width: auto;
+        height: 450px;
+    }
+
+    .chartTitle{
+        font-family: 'oswald', sans-serif; 
+        font-size: xx-large;
+    }
+
+    .chart{
+        width: auto;
+        height: 500px;
+    }
+
+    .newsTitle{
+        font-family: oswald; 
+        font-size: xx-large;
+    }
+
+    .news{
+        height: 500px;
+        overflow-y: scroll;
+    }
+
+    .data{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "Active Confirmed Recovered Deceased";
+        grid-gap: 25px;
+        font-family: 'oswald', sans-serif;
+        font-size: large;
+    }
+
+    .Active{
+        fill: black;
+    }
+    
+    .Confirmed{
+        fill: black;
+    }
+    
+    .Recovered{
+        fill: black;
+    }
+    
+    .Deceased{
+        fill: black;
+    }
+}
