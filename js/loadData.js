@@ -4,7 +4,6 @@ import {chart1} from './countryChart.js';
 import {printCountryNews} from './countryNews.js';
 import {setDataGrid} from './dataGrid.js';
 import {setGlobalGridData} from './dataGridGlobal.js'
-import {setRattingToDB} from './starRatting.js'
 
 let allDataTimelineCountry = [];
 let dateTimeline = [];
