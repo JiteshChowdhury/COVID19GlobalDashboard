@@ -10,25 +10,25 @@ export function drawChart(label,activeCases,confirmedCases,recoveredCases,deceas
         data: {
             labels: label,
             datasets: [{
-                label: 'Daily Active Cases',
+                label: 'Active Cases',
                 borderColor: 'rgba(102, 102, 102, 1)',
                 data: activeCases,
                 fill: false
             },
             {
-                label: 'Total Confirmed Cases',
+                label: 'Confirmed Cases',
                 borderColor: 'rgba(255, 99, 132, 1)',
                 data: confirmedCases,
                 fill: false
             },
             {
-                label: 'Daily Recovered Cases',
+                label: 'Recovered Cases',
                 borderColor: 'rgba(75, 192, 192, 1)',
                 data: recoveredCases,
                 fill: false
             },
             {
-                label: 'Total Deceased Cases',
+                label: 'Deceased Cases',
                 borderColor: '#181818',
                 data: deceasedCases,
                 fill: false
@@ -54,7 +54,7 @@ export function drawChart(label,activeCases,confirmedCases,recoveredCases,deceas
             scales: {
                 xAxes: [{
                     gridLines: {
-                        display:true
+                        display:false
                     }
                 }],
                 yAxes: [{
@@ -64,7 +64,7 @@ export function drawChart(label,activeCases,confirmedCases,recoveredCases,deceas
                         labelString: 'Count'
                     },
                     gridLines: {
-                        display:true
+                        display:false
                     }
                 }]
             },
