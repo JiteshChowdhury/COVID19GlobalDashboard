@@ -18,7 +18,7 @@ export function drawWorldMap(data){
     series.stroke('0.1 white');
     series.selected()
         .fill('white')
-        .stroke('0.1 black');
+        .stroke('0.6 black');
     series.colorScale(anychart.scales.linearColor('#999999', '#080808'));
 
     // set the container id
