@@ -150,7 +150,7 @@
         form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => $(".rating").html('<span style="font-size: x-large; color:#181818; float:right; padding-right:10px; padding-top:20px;">Thank you for rating us !</span>'))
+            .then(response => $(".ratting").html('<span style="font-size: x-large; color:#181818; float:right; padding-right:10px; padding-top:20px;">Thank you for rating us !</span>'))
             .catch(error => console.error('Error!', error.message))
         });
     </script>
