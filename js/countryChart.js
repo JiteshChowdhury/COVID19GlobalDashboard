@@ -70,7 +70,7 @@ export function drawChart(label,activeCases,confirmedCases,recoveredCases,deceas
             },
             elements: {
                 point:{
-                    radius: 0.2
+                    radius: 2
                 }
             },
             responsive: true,
