@@ -72,15 +72,15 @@
                 <div class="stars">
                     <form action="" name="submit-to-google-sheet" id="star-ratting">
                             <button type="submit" style="margin-top: 8px; margin-left: 10px;">Submit</button>
-                            <input class="star star-5" id="star-5" type="radio" name="ratting" value="5" required/>
+                            <input class="star star-5" id="star-5" type="radio" name="rating" value="5" required/>
                             <label class="star star-5" for="star-5"></label>
-                            <input class="star star-4" id="star-4" type="radio" name="ratting" value="4" required/>
+                            <input class="star star-4" id="star-4" type="radio" name="rating" value="4" required/>
                             <label class="star star-4" for="star-4"></label>
-                            <input class="star star-3" id="star-3" type="radio" name="ratting" value="3" required/>
+                            <input class="star star-3" id="star-3" type="radio" name="rating" value="3" required/>
                             <label class="star star-3" for="star-3"></label>
-                            <input class="star star-2" id="star-2" type="radio" name="ratting" value="2" required/>
+                            <input class="star star-2" id="star-2" type="radio" name="rating" value="2" required/>
                             <label class="star star-2" for="star-2"></label>
-                            <input class="star star-1" id="star-1" type="radio" name="ratting" value="1" required/>
+                            <input class="star star-1" id="star-1" type="radio" name="rating" value="1" required/>
                             <label class="star star-1" for="star-1"></label>
                     </form>
                     <label for="star-ratting"style="font-family: 'oswald', sans-serif; float:right; font-size:18px;">Help us gauge!</label>
@@ -133,6 +133,7 @@
                 News:
             </div>
             <div class="news" id="newsList">
+                </br>
                 <ul></ul>
             </div>
             <div class="footer">
@@ -149,7 +150,7 @@
         form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => $(".ratting").html('<span style="font-size: x-large; color:#181818; float:right; padding-right:10px; padding-top:20px;">Thank you for rating us !</span>'))
+            .then(response => $(".rating").html('<span style="font-size: x-large; color:#181818; float:right; padding-right:10px; padding-top:20px;">Thank you for rating us !</span>'))
             .catch(error => console.error('Error!', error.message))
         });
     </script>
