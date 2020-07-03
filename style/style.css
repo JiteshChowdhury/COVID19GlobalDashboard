@@ -158,3 +158,8 @@ a:hover{
   color: #ffffff;
   background-color: black;
 }
+
+#loading{
+  text-align: center;
+  margin: auto;
+}
