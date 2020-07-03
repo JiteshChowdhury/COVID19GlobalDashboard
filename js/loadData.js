@@ -41,10 +41,16 @@ $.get("https://api.covid19api.com/summary", function(data) {
         setGlobalGridData(data.Global.TotalConfirmed,data.Global.TotalRecovered,data.Global.TotalDeaths);
 }, "json");
 
+// $.get("http://127.0.0.1:5000/allData/", function(data) {
+//         console.log(data);
+//         setCountryData(data);
+//         // console.log("From main");
+//         getCountryNews(countryCodeNewsQuery);
+// }, "json");
+
 $.get("https://api.covid19api.com/all", function(data) {
-        // console.log(data);
+        console.log(data);
         setData(data);
-        $(".country").html(country);
         // console.log("From main");
         getCountryNews(countryCodeNewsQuery);
 }, "json");
@@ -86,7 +92,7 @@ function setData(allData){
             }
         }
     }
-    // console.log("worldDataTimeline : ",worldDataTimeline);
+    console.log("worldDataTimeline : ",worldDataTimeline);
     setCountryData(worldDataTimeline);
 }
 
@@ -99,7 +105,10 @@ function setDropDown(countryListData){
         }
         // console.log(document.getElementById("dropDownChosen").children[2].innerHTML);
     }
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("container").style.display = "block";
     $(".chosen").chosen();
+    $(".country").html(country);
 }
 
 function setCountryData(worldDataTimeline){
@@ -300,3 +309,14 @@ function getCountryNews(countryCode){
     //     printCountryNews(data);
     // });
 }
+
+// function getCountryNews(countryCode){
+//     let url = ("http://127.0.0.1:5000/news/?queryCountry=").concat(countryCode);
+//     $.get(url, function(data){
+//         console.log("News for Country Code '"+countryCode+"' : ");
+//         printCountryNews(data);
+//     });
+//     // $.get("newsDataLocal.json", function(data){
+//     //     printCountryNews(data);
+//     // });
+// }
